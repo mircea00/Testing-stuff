@@ -7,7 +7,6 @@ pipeline {
                 script {
                 sh 'cd ..'
                 sh 'ls'
-                sh 'sudo apt-get update'
                 sh 'ls -l /var/jenkins_home/workspace'
                 sh 'ls -l $WORKSPACE'
                 sh 'ls -l /usr/bin'
