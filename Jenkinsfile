@@ -10,7 +10,7 @@ pipeline {
                 'for d in "$1"/*/; do'
                 'dir=${d%/}'                  
                 '[[ -L $dir ]] && continue'
-                'printf '%s\n' "$dir"'
+                'printf '%s' "$dir"'
                 'done'
                 }
             }
