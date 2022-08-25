@@ -4,13 +4,15 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                shopt -s dotglob
-                shopt -s nullglob
-                for d in "$1"/*/; do
-                dir=${d%/}                  # Remove trailing slash
-                [[ -L $dir ]] && continue   # Skip symlinks
-                printf '%s\n' "$dir"
-                done
+                script {
+                'shopt -s dotglob'
+                'shopt -s nullglob'
+                'for d in "$1"/*/; do'
+                'dir=${d%/}'                  
+                '[[ -L $dir ]] && continue'
+                'printf '%s\n' "$dir"'
+                'done'
+                }
             }
         }
         stage('Test') {
