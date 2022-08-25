@@ -5,13 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                'shopt -s dotglob'
-                'shopt -s nullglob'
-                'for d in "$1"/*/; do'
-                'dir=${d%/}'                  
-                '[[ -L $dir ]] && continue'
-                'printf '%s' "$dir"'
-                'done'
+                'ls'
                 }
             }
         }
