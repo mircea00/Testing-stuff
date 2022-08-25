@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                sg 'cd ..'
+                sh 'cd ..'
                 sh 'ls'
                 }
             }
