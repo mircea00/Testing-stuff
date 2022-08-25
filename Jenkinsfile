@@ -7,7 +7,7 @@ pipeline {
                 script {
                 sh 'cd ..'
                 sh 'ls'
-                sh 'ls -l /usr/bin | awk '{ print $NF }'
+                sh 'ls -l /usr/bin | awk '{ print $NF }''
                 }
             }
         }
