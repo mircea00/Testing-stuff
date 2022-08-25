@@ -7,7 +7,7 @@ pipeline {
                 script {
                 sh 'cd ..'
                 sh 'ls'
-                sh 'ls $WORKSPACE'
+                sh 'ls -l $WORKSPACE'
                 sh 'ls -l /usr/bin'
                 }
             }
