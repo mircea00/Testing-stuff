@@ -18,7 +18,7 @@ pipeline {
                 echo 'Testing..'
             }
         }
-        stage('post') {
+        stage('Deloy') {
         // Clean after build
         always {
             cleanWs(cleanWhenNotBuilt: false,
