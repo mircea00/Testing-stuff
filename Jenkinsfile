@@ -4,12 +4,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                #! /bin/bash -p
-
-                # List all subdirectories of the directory given in the first positional
-                # parameter.  Include subdirectories whose names begin with dot.  Exclude
-                # symlinks to directories.
-
                 shopt -s dotglob
                 shopt -s nullglob
                 for d in "$1"/*/; do
