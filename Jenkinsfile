@@ -21,7 +21,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo '-----------------Deleting workspace--------------'
-                leanWs(cleanWhenNotBuilt: false,
+                cleanWs(cleanWhenNotBuilt: false,
                     deleteDirs: true,
                     disableDeferredWipeout: true,
                     notFailBuild: true,
