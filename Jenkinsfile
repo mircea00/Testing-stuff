@@ -18,7 +18,8 @@ pipeline {
                 echo 'Testing..'
             }
         }
-        stage('Deploy') {
+        post {
+        success {
             steps {
                 echo '-----------------Deleting workspace--------------'
                 cleanWs(cleanWhenNotBuilt: false,
@@ -29,6 +30,9 @@ pipeline {
                                [pattern: '.propsfile', type: 'EXCLUDE']])
             }
         }
+
+    }
+      
     }
 }
 
