@@ -18,6 +18,7 @@ pipeline {
                 echo 'Testing..'
             }
         }
+    }
         post {
         success {
             steps {
@@ -28,7 +29,7 @@ pipeline {
                     notFailBuild: true,
                     patterns: [[pattern: '*', type: 'INCLUDE'],
                                [pattern: '.propsfile', type: 'EXCLUDE']])
-            }
+            
         }
 
     }
